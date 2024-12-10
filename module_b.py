@@ -19,7 +19,7 @@ def score_distribution_graph(year, subject, scores, male_count, female_count, fo
     plt.bar(x + width/2, female, width, label='여성', color='pink', alpha=0.7)
     plt.figure(figsize=(10, 6))
     plt.rcParams['font.family'] = font
-    plt.title('%d학년도 수능 %s과목 분포' %(year, subject))
+    plt.title('%d학년도 수능 %s과목 분포' %(year + 1, subject))
     plt.xlabel('표준점수')
     plt.ylabel('인원')
     plt.legend(loc = 'best')
