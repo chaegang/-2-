@@ -8,6 +8,7 @@ def score_distribution_graph(year, subject, scores, male_count, female_count, fo
     # 4. male_count : 표준점수의 남자 인원 
     # 5. female_count : 표준점수의 여자 인원
     # 6. font : 한글이 깨지면 폰트 바꾸기
+    plt.rcParams['font.family'] = font
     plt.figure(figsize=(12, 6))
     x = np.array(scores)
     male = np.array(male_count)
@@ -17,8 +18,6 @@ def score_distribution_graph(year, subject, scores, male_count, female_count, fo
     plt.xticks(x_ticks)
     plt.bar(x - width/2, male, width, label='남성', color='blue', alpha=0.7)
     plt.bar(x + width/2, female, width, label='여성', color='pink', alpha=0.7)
-    plt.figure(figsize=(10, 6))
-    plt.rcParams['font.family'] = font
     plt.title('%d학년도 수능 %s과목 분포' %(year + 1, subject))
     plt.xlabel('표준점수')
     plt.ylabel('인원')
@@ -26,4 +25,4 @@ def score_distribution_graph(year, subject, scores, male_count, female_count, fo
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.tight_layout()
     plt.show()
-    plt.clf()
+
