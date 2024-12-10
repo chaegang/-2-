@@ -26,3 +26,4 @@ def score_distribution_graph(year, subject, scores, male_count, female_count, fo
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.tight_layout()
     plt.show()
+    plt.clf()
