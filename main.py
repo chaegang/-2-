@@ -39,4 +39,4 @@ for score, male, female in data_list:
     males_list.append(male)
     females_list.append(female)
 
-module_b.score_distribution_graph(user_year,user_subject, scores, males_list, females_list, font = 'Malgun Gothic')
+module_b.score_distribution_graph(int(user_year),user_subject, scores, males_list, females_list, font = 'Malgun Gothic')
